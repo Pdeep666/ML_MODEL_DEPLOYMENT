@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Class Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    input:focus {
+      border-color: #74ebd5;
+      outline: none;
+    }
+
+    button {
+      background: #74ebd5;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #4cabc2;
+    }
+
+    .prediction {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #333;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Flower Class Prediction</h1>
+    <!-- Main Input Form -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Sepal_Length" placeholder="Enter Sepal Length" required />
+      <input type="text" name="Sepal_Width" placeholder="Enter Sepal Width" required />
+      <input type="text" name="Petal_Length" placeholder="Enter Petal Length" required />
+      <input type="text" name="Petal_Width" placeholder="Enter Petal Width" required />
+      <button type="submit">Predict</button>
+    </form>
+    <div class="prediction">
+      {{ prediction_text }}
+    </div>
+  </div>
+</body>
+</html>
