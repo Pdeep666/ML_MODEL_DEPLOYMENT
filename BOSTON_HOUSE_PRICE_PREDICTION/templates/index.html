@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boston House Price Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #333;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      flex: 1;
+      min-width: 200px;
+      max-width: 230px;
+    }
+
+    .input-group label {
+      font-size: 1em;
+      margin-bottom: 8px;
+      text-align: left;
+      font-weight: 600;
+      display: block;
+    }
+
+    input {
+      padding: 12px 15px;
+      width: 100%;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #74ebd5;
+      outline: none;
+    }
+
+    button {
+      background: #74ebd5;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.2em;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #4cabc2;
+    }
+
+    .prediction {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #333;
+      font-weight: 600;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .prediction.show {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Boston House Price Prediction</h1>
+    <!-- Main Input Form -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="input-group">
+        <label for="CRIM">CRIM:</label>
+        <input type="text" name="CRIM" id="CRIM" placeholder="Enter CRIM" required />
+      </div>
+      <div class="input-group">
+        <label for="zn">ZN:</label>
+        <input type="text" name="zn" id="zn" placeholder="Enter ZN" required />
+      </div>
+      <div class="input-group">
+        <label for="Indus">Indus:</label>
+        <input type="text" name="Indus" id="Indus" placeholder="Enter Indus" required />
+      </div>
+      <div class="input-group">
+        <label for="Chax">CHAX:</label>
+        <input type="text" name="Chax" id="Chax" placeholder="Enter CHAX" required />
+      </div>
+      <div class="input-group">
+        <label for="nox">NOX:</label>
+        <input type="text" name="nox" id="nox" placeholder="Enter NOX" required />
+      </div>
+      <div class="input-group">
+        <label for="rm">RM:</label>
+        <input type="text" name="rm" id="rm" placeholder="Enter RM" required />
+      </div>
+      <div class="input-group">
+        <label for="Age">AGE:</label>
+        <input type="text" name="Age" id="Age" placeholder="Enter AGE" required />
+      </div>
+      <div class="input-group">
+        <label for="Dis">DIS:</label>
+        <input type="text" name="Dis" id="Dis" placeholder="Enter DIS" required />
+      </div>
+      <div class="input-group">
+        <label for="Rad">RAD:</label>
+        <input type="text" name="Rad" id="Rad" placeholder="Enter RAD" required />
+      </div>
+      <div class="input-group">
+        <label for="Tax">TAX:</label>
+        <input type="text" name="Tax" id="Tax" placeholder="Enter TAX" required />
+      </div>
+      <div class="input-group">
+        <label for="PTRratio">PTR Ratio:</label>
+        <input type="text" name="PTRratio" id="PTRratio" placeholder="Enter PTR Ratio" required />
+      </div>
+      <div class="input-group">
+        <label for="B">B:</label>
+        <input type="text" name="B" id="B" placeholder="Enter B" required />
+      </div>
+      <div class="input-group">
+        <label for="Lstat">Lstat:</label>
+        <input type="text" name="Lstat" id="Lstat" placeholder="Enter Lstat" required />
+      </div>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <!-- Display Prediction Result -->
+    <div class="prediction" id="prediction-text">
+      {{ prediction_text }}
+    </div>
+  </div>
+
+  <script>
+    // Add class to show prediction when it exists
+    const predictionText = document.getElementById("prediction-text");
+    if (predictionText.innerHTML.trim() !== "") {
+      predictionText.classList.add("show");
+    }
+  </script>
+</body>
+</html>
