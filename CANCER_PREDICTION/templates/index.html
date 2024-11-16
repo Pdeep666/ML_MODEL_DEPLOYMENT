@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Type Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #00ffcc;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .form-group label {
+            width: 30%;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            flex: 1;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00ffcc;
+        }
+
+        button {
+            background-color: #00ffcc;
+            color: #000;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #00bfa6;
+        }
+
+        .prediction {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cancer Type Prediction</h1>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <div class="form-group">
+                <label for="clump">Clump Thickness:</label>
+                <input type="number" id="clump" name="clump" required>
+            </div>
+            <div class="form-group">
+                <label for="unifsize">Uniformity of Cell Size (UnifSize):</label>
+                <input type="number" id="unifsize" name="unifsize" required>
+            </div>
+            <div class="form-group">
+                <label for="unifshape">Uniformity of Cell Shape (UnifShape):</label>
+                <input type="number" id="unifshape" name="unifshape" required>
+            </div>
+            <div class="form-group">
+                <label for="blandchrom">Bland Chromatin (BlandChrom):</label>
+                <input type="number" id="blandchrom" name="blandchrom" required>
+            </div>
+            <div class="form-group">
+                <label for="normnucl">Normal Nucleoli (NormNucl):</label>
+                <input type="number" id="normnucl" name="normnucl" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <div class="prediction">
+            {{ prediction_text }}
+        </div>
+    </div>
+</body>
+</html>
