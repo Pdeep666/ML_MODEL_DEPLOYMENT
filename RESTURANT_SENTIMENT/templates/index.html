@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Sentiment Analysis</h1>
+        <form action="/predict" method="post">
+            <textarea name="review" placeholder="Enter your restaurant review here..." required></textarea><br>
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+        {% if sentiment %}
+        <div class="result">
+            <strong>Review:</strong> {{ review }}<br>
+            <strong>Sentiment:</strong> {{ sentiment }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
