@@ -54,7 +54,7 @@ This project focuses on predicting rainfall using machine learning techniques. T
 
 - The project includes an HTML file to interact with the model.
 - Open the HTML file in a browser to input values and get predictions.
-
+![image alt](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/f030dc409a280ff77e82512b1591b36d2c646671/RAINFALL_PREDICTION/output.png)
 ## Model File
 
 - A pre-trained model file (`.pkl` or `.h5`) is included in the project.
