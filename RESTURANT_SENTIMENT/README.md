@@ -64,7 +64,7 @@ This project focuses on sentiment analysis for restaurant reviews. It aims to cl
 
 - The trained sentiment analysis model is saved as `sentiment_model.pkl`.
 - This file can be loaded for making offline predictions without retraining.
-
+![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/7570cf0ab6c169651210da1e5731ea594d95dcea/RESTURANT_SENTIMENT/output.png)
 ## Future Enhancements
 
 - Integration with real-time restaurant review platforms.
