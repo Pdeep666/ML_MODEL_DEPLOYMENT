@@ -50,7 +50,7 @@ This project focuses on predicting rainfall using machine learning techniques. T
 ## Results
 
 The best-performing model is selected based on evaluation metrics. The results are visualized using graphs and charts for better interpretation.
-
+![image alt](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/c40b4ff745bc3c07c8cb8183481309967fa2a557/CANCER_PREDICTION/output.png)
 ## Future Enhancements
 
 - Integration with real-time weather APIs for live predictions.
