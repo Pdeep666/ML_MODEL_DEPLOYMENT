@@ -4,6 +4,20 @@
 
 This project focuses on sentiment analysis for restaurant reviews. It aims to classify customer feedback as positive or negative using machine learning and natural language processing (NLP) techniques. The model is trained using different classifiers and deployed via a Flask-based web interface.
 
+## Business problem
+
+Understanding customer sentiment is crucial for restaurants to improve their services and customer satisfaction. Traditional feedback mechanisms may not provide actionable insights due to the vast number of reviews available. This project aims to automate the sentiment analysis process, enabling restaurants to classify reviews as positive or negative efficiently. The insights gained from this analysis can help restaurants identify strengths and areas needing improvement, ultimately leading to better customer experiences.
+
+## Objectives
+
+- Develop a sentiment analysis model to classify restaurant reviews as positive or negative.
+- Preprocess textual data, including cleaning, tokenization, and vectorization.
+- Perform Exploratory Data Analysis (EDA) to understand sentiment distribution.
+- Train and evaluate multiple machine learning models (Naive Bayes, Logistic Regression, Random Forest).
+- Deploy the model using a Flask-based API for real-time sentiment classification.
+- Create a web-based interface for user-friendly interaction.
+- Save and load the trained model for offline predictions.
+
 ## Features
 
 - Data preprocessing, including text cleaning and tokenization
@@ -64,12 +78,12 @@ This project focuses on sentiment analysis for restaurant reviews. It aims to cl
 
 - The trained sentiment analysis model is saved as `sentiment_model.pkl`.
 - This file can be loaded for making offline predictions without retraining.
-![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/7570cf0ab6c169651210da1e5731ea594d95dcea/RESTURANT_SENTIMENT/output.png)
+
+
+
 ## Future Enhancements
 
 - Integration with real-time restaurant review platforms.
-
-
 - Experimenting with deep learning models (LSTMs, Transformers) for improved accuracy.
 
 ## Contributing
