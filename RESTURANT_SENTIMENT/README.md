@@ -73,7 +73,7 @@ Understanding customer sentiment is crucial for restaurants to improve their ser
 
 - The project includes an HTML file for a user-friendly sentiment prediction interface.
 - Open the web interface in a browser and input restaurant reviews to get sentiment predictions.
-
+![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/a8823e5f1547f6d1096ae1e34fc5644a0fb375d5/RESTURANT_SENTIMENT/output.png)
 ## Model File
 
 - The trained sentiment analysis model is saved as `sentiment_model.pkl`.
