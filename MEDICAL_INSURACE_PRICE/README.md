@@ -87,7 +87,7 @@ To predict medical insurance costs for a new input:
    prediction = pickled_model.predict(input_data_as_numpy_array)
    print('The insurance cost is USD', prediction[0])
    ```
-
+![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/0b3804097415114a36e098ffcbcdb411c0c008f3/MEDICAL_INSURACE_PRICE/output.png)
 ## Future Enhancements
 
 - Deploy the model as a web application using Flask.
