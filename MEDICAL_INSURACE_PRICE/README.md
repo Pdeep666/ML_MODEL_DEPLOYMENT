@@ -90,7 +90,6 @@ To predict medical insurance costs for a new input:
 ![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/0b3804097415114a36e098ffcbcdb411c0c008f3/MEDICAL_INSURACE_PRICE/output.png)
 ## Future Enhancements
 
-- Deploy the model as a web application using Flask.
 - Integrate real-world medical insurance data for better predictions.
 
 ## Contributing
