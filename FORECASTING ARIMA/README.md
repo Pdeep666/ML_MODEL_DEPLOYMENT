@@ -19,6 +19,7 @@ The sales of champagne fluctuate due to seasonal demand, economic factors, and c
     ![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/65ab03c7f9242188482f992d90309acf8863d242/FORECASTING%20ARIMA/IMG1.png)
 - **Statistical Analysis**:
   - Calculated rolling mean and rolling standard deviation to understand sales variability.
+    ![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/4631bed644be5db6f718eb8355f36e76e59cee68/FORECASTING%20ARIMA/IMG2.png)
   - Performed stationarity tests for model selection.
 - **Forecasting Methods**:
   - Applied **ARIMA (AutoRegressive Integrated Moving Average)** for sales prediction.
