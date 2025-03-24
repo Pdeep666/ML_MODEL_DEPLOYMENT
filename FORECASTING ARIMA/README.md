@@ -16,6 +16,7 @@ The sales of champagne fluctuate due to seasonal demand, economic factors, and c
   - Converted date columns to proper datetime format for time series analysis.
 - **Time Series Decomposition**:
   - Decomposed sales data into **trend, seasonality, and residuals**.
+    ![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/65ab03c7f9242188482f992d90309acf8863d242/FORECASTING%20ARIMA/IMG1.png)
 - **Statistical Analysis**:
   - Calculated rolling mean and rolling standard deviation to understand sales variability.
   - Performed stationarity tests for model selection.
