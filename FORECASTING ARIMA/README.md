@@ -24,6 +24,7 @@ The sales of champagne fluctuate due to seasonal demand, economic factors, and c
 - **Forecasting Methods**:
   - Applied **ARIMA (AutoRegressive Integrated Moving Average)** for sales prediction.
   - Applied **SARIMA (Seasonal ARIMA) (1,1,1)(1,1,1,12)** to incorporate seasonality and improve accuracy.
+  - ![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/2ca48778b5098cfbb06a06320e4cdb59c1692218/FORECASTING%20ARIMA/IMG3.png)
   - Used the model to generate **future sales predictions** to help in business planning.
 
 ## Tools Used
