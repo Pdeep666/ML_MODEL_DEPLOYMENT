@@ -54,7 +54,7 @@ Follow these steps to set up and run the Netflix Movie Recommendation System:
    ```
    http://127.0.0.1:5000/
    ```
-
+![image_anti](https://github.com/Pdeep666/ML_MODEL_DEPLOYMENT/blob/aeccb37ae650af4cbfea0b5d073b8d1c10a2933d/MOVIE_RECOMMENDATION/output.png)
 - **Python** (Pandas, NumPy, Matplotlib, Seaborn)
 
 - **Scikit-learn** (for machine learning modeling)
