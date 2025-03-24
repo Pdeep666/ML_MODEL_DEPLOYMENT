@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation System</h1>
+        <select id="movieSelect">
+            {% for movie in movies %}
+                <option value="{{ movie }}">{{ movie }}</option>
+            {% endfor %}
+        </select>
+        <button onclick="getRecommendations()">Recommend</button>
+        <div id="recommendations"></div>
+    </div>
+
+    <script>
+        function getRecommendations() {
+            let movie = document.getElementById("movieSelect").value;
+            fetch("/recommend", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ movie: movie })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let recDiv = document.getElementById("recommendations");
+                recDiv.innerHTML = "<h3>Recommended Movies:</h3><ul>" + 
+                    data.recommended_movies.map(m => `<li>${m}</li>`).join("") + "</ul>";
+            });
+        }
+    </script>
+</body>
+</html>
